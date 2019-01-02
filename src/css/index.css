@@ -340,8 +340,6 @@ header {
             color: #3d3d3d; }
             header article #article > ul li a:hover {
               color: #ff432e; }
-        header article #article > ul li:first-child a {
-          color: #ff432e; }
       header article #article > ol {
         float: right; }
         header article #article > ol li {
@@ -1098,7 +1096,7 @@ aside {
     #ned #ned-ul ul li {
       float: left;
       width: 160px;
-      margin-top: 10px; }
+      margin-top: 20px; }
       #ned #ned-ul ul li h3 {
         font-size: 18px;
         line-height: 24px; }
@@ -1112,7 +1110,7 @@ aside {
             text-decoration: underline; }
     #ned #ned-ul ul li:first-of-type {
       width: 250px;
-      margin-top: 30px; }
+      margin-top: 20px; }
       #ned #ned-ul ul li:first-of-type > img {
         width: 187px;
         height: 54px; }
@@ -1121,7 +1119,7 @@ aside {
         height: 36px; }
     #ned #ned-ul ul li:last-of-type {
       width: 120px;
-      margin-top: 30px; }
+      margin-top: 20px; }
       #ned #ned-ul ul li:last-of-type img {
         width: 100px;
         height: 100px; }

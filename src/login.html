@@ -2,9 +2,100 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>登陆-奥买家</title>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<link rel="stylesheet" href="font/iconfont.css">
 	</head>
 	<body>
-		登陆
+		<div id="head">
+			<ul>
+				<li>
+					<a href="index.html"><img src="img/logo-bottom.png"/></a>
+					<span>欢迎登陆</span>
+				</li>
+				<li>
+					<span>没有账号？</span>
+					<a href="registor.html">立即注册</a>
+					<a href="">帮助中心</a>
+				</li>
+			</ul>
+		</div>
+		<div id="login">
+			<div id="login-one">
+				<div id="login-two">
+					<p>账号登陆</p>
+					<div id="login-name">
+						<i class="iconfont">&#xe634;</i>
+						<input type="text" name="uname" id="uname" value="" placeholder="手机号"/>
+						<span id="s1"></span>
+					</div>
+					<div id="login-pwd">
+						<i class="iconfont">&#xe694;</i>
+						<input type="password" name="upwd" id="upwd" value=""  placeholder="密码由6-20个数字字母组成"/>
+						<span id="s2"></span>
+					</div>
+					<div id="login-yzm">
+						<div id="oYz">
+								<i class="iconfont">&#xe656;</i>
+								<input type="text" name="uyzm" id="uyzm" value="" placeholder="验证码"/>
+						</div>
+						<span id="yzm"></span><span id="box-exchange">看不清楚？换一个</span>
+						<span id="s3"></span>
+					</div>
+					<span id="oLogin">登陆</span>
+				</div>
+			</div>
+		</div>
+		
+		<div id="foot">
+			<p>
+				<a href="">关于奥买家</a><span>|</span>
+				<a href="">诚聘英才</a><span>|</span>
+				<a href="">联系我们</a>
+			</p>
+			<p>
+				粤ICP备15091122号-1|Copyright© 奥买家 2013-2016，All Rights Reserved
+			</p>
+		</div>
 	</body>
 </html>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/public.js"></script>
+<script src="js/cookie.js"></script>
+<script type="text/javascript">
+	$("#yzm").html(yzm());
+	$("#box-exchange").click(function(){
+		$("#yzm").html(yzm());
+	})
+	$("#oLogin").click(function(){
+		var $uname = $("#uname").val();
+		var $upwd = $("#upwd").val();
+		var $uyzm = $("#uyzm").val();
+		var $yzm = $("#yzm").html();
+		var cookieStr = getCookie('registorUser') ? getCookie('registorUser') : '';
+		var obj = convertCookieStrToObj(cookieStr);
+		if($uyzm === $yzm){
+			if(obj[$uname] == $upwd){
+				location.href = 'index.html';
+				createCookie('loginUser',uname,7);
+			}else{
+				$("#s2").html(`<i class="iconfont">&#xe667;</i>用户名与密码不匹配`);
+			}
+			
+		}else{
+			$("#s3").html(`<i class="iconfont">&#xe667;</i>验证码不一致`);
+		}
+	})
+	function convertCookieStrToObj(str){
+		if(!str){
+			return {};
+		}
+		var obj = {};
+		var arr = str.split(',');
+		for(var i = 0,len = arr.length;i < len ;i ++){
+			var list = arr[i].split(':');
+			obj[list[0]] = list[1];
+		}
+		return obj;
+	}
+</script>

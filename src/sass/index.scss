@@ -459,11 +459,6 @@ header{
                         }
                     }
                 }
-                li:first-child{
-                    a{
-                        color: #ff432e;
-                    }
-                }
             }
             >ol{
                 li{
@@ -1449,7 +1444,7 @@ aside{
            li{
                float: left;
                width: 160px;
-               margin-top: 10px;
+               margin-top: 20px;
                h3{
                    font-size: 18px;
                    line-height: 24px;
@@ -1468,7 +1463,7 @@ aside{
            }
            li:first-of-type{
                width: 250px;
-               margin-top: 30px;
+               margin-top: 20px;
                >img{
                    width: 187px;
                    height: 54px;
@@ -1483,7 +1478,7 @@ aside{
            }
            li:last-of-type{
                width: 120px;
-               margin-top: 30px;
+               margin-top: 20px;
                img{
                    width: 100px;
                    height: 100px;

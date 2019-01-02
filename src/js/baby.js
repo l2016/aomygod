@@ -136,47 +136,17 @@
 	$("#shopCart-top").click(function(){//返回头部
 		$("html,body").animate({"scrollTop":0},1000);
 	})
-})()	
-//楼梯
-var $h=$(".sec-top").offset().top - 10,
-	$aside=$("aside").offset().top - 450;
-$(window).scroll(function(){
-	var $t=$(document).scrollTop();
-	if($t>$h){
-		$("#LoutiNav").css("display","block");
-	}else{
-		$("#LoutiNav").css("display","none")
-	}
-	if($t>$aside){
-		var $left=$("#LoutiNav").offset().left,
-			$top=$("#LoutiNav").offset().top;
-		$("#LoutiNav").css({"position":"absolute","top":$top,"left":$left});
-	}else{
-		$("#LoutiNav").css({"position":"fixed","top":"","left":""});
-	}
-})
-//点击
-var $ulist=$("#LoutiNav ul li:not(.lilast)");
-$ulist.click(function(){
-	var $index=$(this).index();
-	var $lout=$(".lout");
-	var $ctop = $lout.eq($index).offset().top;
-	$("html,body").animate({"scrollTop":$ctop},1000);
-})
+})()
 
 
-function getCookie(key){
-	var arr = document.cookie.split('; ');
-	for(var i = 0,len = arr.length;i < len;i ++){
-		var list = arr[i].split('=');
-		if(encodeURIComponent(key) === list[0]){
-			return decodeURIComponent(list[1]);
-		}
-	}
-}
-var $brr = parseInt(getCookie('registorUser')) ;
-if(!$brr){
-	$("#uphone").html('登陆');
-}else{
-	$("#uphone").html($brr);
-}
+
+$("#article-commodity-span").mouseenter(function(){
+	$("#article-commodity-ul").css("display","block");
+}).mouseleave(function(){
+	$("#article-commodity-ul").css("display","none");
+})
+$("#article-commodity-ul").mouseenter(function(){
+	$("#article-commodity-ul").css("display","block");
+}).mouseleave(function(){
+	$("#article-commodity-ul").css("display","none");
+})
