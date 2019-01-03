@@ -1,5 +1,5 @@
 //banner
-(function(){
+$(function(){
 	var timer=null,
 		index=0,
 		$uList=$("#banner ul li"),//大图
@@ -49,9 +49,9 @@
 		$oList.eq(index).addClass("ban_1").siblings().removeClass("ban_1");
 		setTimeout((timer=setInterval( autoPlay , 3000 )),2000);
 	})
-})();
+})
 //HOT必买爆品
-(function(){
+$(function(){
 	$.ajax({
 		type:"get",
 		url:"json/data.json",
@@ -90,9 +90,9 @@
 		}
 		$(".sec-content-ul").html(conStr);
 	}
-})();
+})
 //BRAND 全球品牌划过
-(function(){
+$(function(){
 	$("#sec-bra-r ul li").mouseenter(function(){
 		$(this).addClass("sec-bra-r-li").siblings().removeClass();
 		$("#sec-bra-r ol").eq($(this).index()).addClass("sec-bra-r-ol").siblings().removeClass();
@@ -118,9 +118,9 @@
 	}).mouseleave(function(){
 		$(this).find("img").stop().animate({'left':'50px'},300);
 	})
-})();	
+})
 //购物车 fixed
-(function(){
+$(function(){
 	$("#shopCart-cart").click(function(){
 		var $left = $(this).parent().offset().left;
 		if( parseInt($left+40) === $(window).width()){
@@ -136,17 +136,345 @@
 	$("#shopCart-top").click(function(){//返回头部
 		$("html,body").animate({"scrollTop":0},1000);
 	})
-})()
-
-
-
-$("#article-commodity-span").mouseenter(function(){
-	$("#article-commodity-ul").css("display","block");
-}).mouseleave(function(){
-	$("#article-commodity-ul").css("display","none");
 })
-$("#article-commodity-ul").mouseenter(function(){
-	$("#article-commodity-ul").css("display","block");
+
+
+//二级菜单显示隐藏
+$(function(){
+	$("#article-commodity-span").mouseenter(function(){
+		$("#article-commodity-ul").css("display","block");
+	}).mouseleave(function(){
+		$("#article-commodity-ul").css("display","none");
+	})
+	$("#article-commodity-ul").mouseenter(function(){
+		$("#article-commodity-ul").css("display","block");
+	}).mouseleave(function(){
+		$("#article-commodity-ul").css("display","none");
+	})
+})
+
+//新品首发
+$(function(){
+	$.getJSON("json/data1.json?id="+new Date().getTime(), function(arr){
+		var conStr = "";
+		for(var i=0 ; i<arr[0].length ; i++){
+			var pro=arr[0][i];
+			conStr += `<li>
+						<div class="newNav-img1">
+							<img src="img/${pro.src1}" alt="" />
+						</div>
+						<div class="newNav-img2">
+							<a href="">
+								<img src="img/${pro.src2}" alt="" />
+							</a>
+						</div>
+						<p>
+							<a href="">${pro.name}</a>
+						</p>
+						<div class="newPicre">
+							<em>￥</em><span>${pro.money}</span>
+							<del>${pro.price}</del>
+						</div>
+					</li>`;
+		}
+		$(".newNav-ul").html(conStr);
+		var index = 0 ;
+		$("#newr").click(function(){
+			index++;
+			if(index===3){
+				index=0
+			}
+			var $newNavwidth = (-$(".newNav").width()-1)*index;
+			$(".newNav-ul").animate({ left : $newNavwidth },100);
+		})
+		$("#newl").click(function(){
+			index--;
+			if(index===-1){
+				index=2
+			}
+			var $newNavwidth = (-$(".newNav").width()-1)*index;
+			$(".newNav-ul").animate({ left : $newNavwidth },100);
+		})
+	})
+})
+
+//热销爆款
+$(function(){
+	$.getJSON("json/data1.json?id="+new Date().getTime(), function(arr){
+		var conStr = "";
+		for(var i=0 ; i<arr[1].length ; i++){
+			var pro=arr[1][i];
+			conStr += `<li>
+						<div class="faddish-div">
+							<a href="">
+								<img src="img/${pro.src}" alt="" />
+							</a>
+							<p>
+								<a href="">${pro.name}</a>
+							</p>
+							<div class="faddish-picre">
+								<em>￥</em><span>${pro.money}</span>
+								<del>${pro.price}</del>
+							</div>
+							<div class="faddish-shopping">
+								加入购物车
+							</div>
+						</div>
+					</li>`;
+		}
+		$(".nav-list1").html(conStr);	
+		$(".nav-list1 li").mouseenter(function(){
+			$(this).find(".faddish-div").stop().animate({'position': 'absolute','height' : 425},300,function(){
+				$(this).find(".faddish-shopping").css({'display':'block','z-index':10});
+			});
+		}).mouseleave(function(){
+			$(this).find(".faddish-shopping").css({'display':'none','z-index':''});
+			$(this).find(".faddish-div").stop().animate({'position': '','height' : 372},100,function(){});
+		})
+	})
+})
+//婴幼儿奶粉
+$(function(){
+	$.getJSON("json/data1.json?id="+new Date().getTime(), function(arr){
+		var conStr = "";
+		for(var i=0 ; i<arr[2].length ; i++){
+			var pro=arr[2][i];
+			conStr += `<li>
+						<div class="faddish-div">
+							<a href="">
+								<img src="img/${pro.src}" alt="" />
+							</a>
+							<p>
+								<a href="">${pro.name}</a>
+							</p>
+							<div class="faddish-picre">
+								<em>￥</em><span>${pro.money}</span>
+								<del>${pro.price}</del>
+							</div>
+							<div class="faddish-shopping">
+								加入购物车
+							</div>
+						</div>
+					</li>`;
+		}
+		$(".nav-list2").html(conStr);	
+		$(".nav-list2 li").mouseenter(function(){
+			$(this).find(".faddish-div").stop().animate({'position': 'absolute','height' : 425},300,function(){
+				$(this).find(".faddish-shopping").css({'display':'block','z-index':10});
+			});
+		}).mouseleave(function(){
+			$(this).find(".faddish-shopping").css({'display':'none','z-index':''});
+			$(this).find(".faddish-div").stop().animate({'position': '','height' : 372},100,function(){});
+		})
+	})
+})
+//纸尿裤
+$(function(){
+	$.getJSON("json/data1.json?id="+new Date().getTime(), function(arr){
+		var conStr = "";
+		for(var i=0 ; i<arr[3].length ; i++){
+			var pro=arr[3][i];
+			conStr += `<li>
+						<div class="faddish-div">
+							<a href="">
+								<img src="img/${pro.src}" alt="" />
+							</a>
+							<p>
+								<a href="">${pro.name}</a>
+							</p>
+							<div class="faddish-picre">
+								<em>￥</em><span>${pro.money}</span>
+								<del>${pro.price}</del>
+							</div>
+							<div class="faddish-shopping">
+								加入购物车
+							</div>
+						</div>
+					</li>`;
+		}
+		$(".nav-list3").html(conStr);	
+		$(".nav-list3 li").mouseenter(function(){
+			$(this).find(".faddish-div").stop().animate({'position': 'absolute','height' : 425},300,function(){
+				$(this).find(".faddish-shopping").css({'display':'block','z-index':10});
+			});
+		}).mouseleave(function(){
+			$(this).find(".faddish-shopping").css({'display':'none','z-index':''});
+			$(this).find(".faddish-div").stop().animate({'position': '','height' : 372},100,function(){});
+		})
+	})
+})
+//营养辅食
+$(".nav-list4 li").mouseenter(function(){
+	$(this).find(".faddish-div").stop().animate({'position': 'absolute','height' : 425},300,function(){
+		$(this).find(".faddish-shopping").css({'display':'block','z-index':10});
+	});
 }).mouseleave(function(){
-	$("#article-commodity-ul").css("display","none");
+	$(this).find(".faddish-shopping").css({'display':'none','z-index':''});
+	$(this).find(".faddish-div").stop().animate({'position': '','height' : 372},100,function(){});
+})
+//清洁洗护
+$(function(){
+	$.getJSON("json/data1.json?id="+new Date().getTime(), function(arr){
+		var conStr = "";
+		for(var i=0 ; i<arr[4].length ; i++){
+			var pro=arr[4][i];
+			conStr += `<li>
+						<div class="faddish-div">
+							<a href="">
+								<img src="img/${pro.src}" alt="" />
+							</a>
+							<p>
+								<a href="">${pro.name}</a>
+							</p>
+							<div class="faddish-picre">
+								<em>￥</em><span>${pro.money}</span>
+								<del>${pro.price}</del>
+							</div>
+							<div class="faddish-shopping">
+								加入购物车
+							</div>
+						</div>
+					</li>`;
+		}
+		$(".nav-list5").html(conStr);	
+		$(".nav-list5 li").mouseenter(function(){
+			$(this).find(".faddish-div").stop().animate({'position': 'absolute','height' : 425},300,function(){
+				$(this).find(".faddish-shopping").css({'display':'block','z-index':10});
+			});
+		}).mouseleave(function(){
+			$(this).find(".faddish-shopping").css({'display':'none','z-index':''});
+			$(this).find(".faddish-div").stop().animate({'position': '','height' : 372},100,function(){});
+		})
+	})
+})
+//喂养餐具
+$(function(){
+	$.getJSON("json/data1.json?id="+new Date().getTime(), function(arr){
+		var conStr = "";
+		for(var i=0 ; i<arr[5].length ; i++){
+			var pro=arr[5][i];
+			conStr += `<li>
+						<div class="faddish-div">
+							<a href="">
+								<img src="img/${pro.src}" alt="" />
+							</a>
+							<p>
+								<a href="">${pro.name}</a>
+							</p>
+							<div class="faddish-picre">
+								<em>￥</em><span>${pro.money}</span>
+								<del>${pro.price}</del>
+							</div>
+							<div class="faddish-shopping">
+								加入购物车
+							</div>
+						</div>
+					</li>`;
+		}
+		$(".nav-list6").html(conStr);	
+		$(".nav-list6 li").mouseenter(function(){
+			$(this).find(".faddish-div").stop().animate({'position': 'absolute','height' : 425},300,function(){
+				$(this).find(".faddish-shopping").css({'display':'block','z-index':10});
+			});
+		}).mouseleave(function(){
+			$(this).find(".faddish-shopping").css({'display':'none','z-index':''});
+			$(this).find(".faddish-div").stop().animate({'position': '','height' : 372},100,function(){});
+		})
+	})
+})
+//玩具出行
+$(function(){
+	$.getJSON("json/data1.json?id="+new Date().getTime(), function(arr){
+		var conStr = "";
+		for(var i=0 ; i<arr[6].length ; i++){
+			var pro=arr[6][i];
+			conStr += `<li>
+						<div class="faddish-div">
+							<a href="">
+								<img src="img/${pro.src}" alt="" />
+							</a>
+							<p>
+								<a href="">${pro.name}</a>
+							</p>
+							<div class="faddish-picre">
+								<em>￥</em><span>${pro.money}</span>
+								<del>${pro.price}</del>
+							</div>
+							<div class="faddish-shopping">
+								加入购物车
+							</div>
+						</div>
+					</li>`;
+		}
+		$(".nav-list7").html(conStr);	
+		$(".nav-list7 li").mouseenter(function(){
+			$(this).find(".faddish-div").stop().animate({'position': 'absolute','height' : 425},300,function(){
+				$(this).find(".faddish-shopping").css({'display':'block','z-index':10});
+			});
+		}).mouseleave(function(){
+			$(this).find(".faddish-shopping").css({'display':'none','z-index':''});
+			$(this).find(".faddish-div").stop().animate({'position': '','height' : 372},100,function(){});
+		})
+	})
+})
+//妈妈专区
+$(function(){
+	$.getJSON("json/data1.json?id="+new Date().getTime(), function(arr){
+		var conStr = "";
+		for(var i=0 ; i<arr[7].length ; i++){
+			var pro=arr[7][i];
+			conStr += `<li>
+						<div class="faddish-div">
+							<a href="">
+								<img src="img/${pro.src}" alt="" />
+							</a>
+							<p>
+								<a href="">${pro.name}</a>
+							</p>
+							<div class="faddish-picre">
+								<em>￥</em><span>${pro.money}</span>
+								<del>${pro.price}</del>
+							</div>
+							<div class="faddish-shopping">
+								加入购物车
+							</div>
+						</div>
+					</li>`;
+		}
+		$(".nav-list8").html(conStr);	
+		$(".nav-list8 li").mouseenter(function(){
+			$(this).find(".faddish-div").stop().animate({'position': 'absolute','height' : 425},300,function(){
+				$(this).find(".faddish-shopping").css({'display':'block','z-index':10});
+			});
+		}).mouseleave(function(){
+			$(this).find(".faddish-shopping").css({'display':'none','z-index':''});
+			$(this).find(".faddish-div").stop().animate({'position': '','height' : 372},100,function(){});
+		})
+	})
+})
+//楼梯
+$(function(){
+	var $H = $(".louti-top").offset().top - 20;
+	$(window).scroll(function(){
+		var $top = $(document).scrollTop();
+		console.log($top)
+		if($top>$H){
+			$("#lou-ti-nav").css('display','block');
+		}else{
+			$("#lou-ti-nav").css('display','none');
+		}
+		if($top>16550){
+			var $tLeft = $("#lou-ti-nav").offset().left,
+				$ttop = $("#lou-ti-nav").offset().top;
+			$("#lou-ti-nav").css({'position':'absolute','top':$ttop,'left':$tLeft});
+		}else{
+			$("#lou-ti-nav").css({'position':'fixed','top':'','left':''});
+		}
+	})
+	var $olist = $("#lou-ti-nav li");
+	$olist.click(function(){
+		var $newProduct = $(".newProduct");
+		var $otop = $newProduct.eq($(this).index()).offset().top;
+		$("html,body").animate({'scrollTop':$otop},1000);
+	})
 })

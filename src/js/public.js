@@ -65,7 +65,6 @@ function yzm(){
 			str += ch;
 		}
 	}
-	//console.log( str );
 	return str;
 }
 //碰撞

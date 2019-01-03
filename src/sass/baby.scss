@@ -1,3 +1,4 @@
+@charset "utf-8";
 header{
     #article-commodity-ul{
         display: none;
@@ -17,21 +18,248 @@ header{
         }
     }
 } 
-#baby-particulars{
-    width: 100%;
-    background: #d3d3d3;
-    .newProduct{
-        width: 1200px;
-        height: ;
-        position: relative;
-        h2{
-            text-align: center;
-        }
-        span{
-            
-        }
-        span:nth-of-type(1){
-            
+//楼梯
+#lou-ti-nav{
+        position: fixed;
+        top: 50px;
+        left: 20px;
+        display: none;
+        ul{
+            width: 50px;
+            height: 450px;
+            background: white;
+            li{
+                width: 50px;
+                height: 50px;
+                padding: 8px 0 0 8px;
+                span{
+                    display: inline-block;
+                    width: 34px;
+                    height: 34px;
+                }
+                &:hover{
+                    background: #ff432a;
+                    span{
+                        color: white;
+                    }
+                }
+            }
         }
     }
+#baby-particulars{
+    width: 100%;
+    background: #f2f2f2;
+    .newProduct{
+        width: 1200px;
+        height: 74px;
+        margin: 0 auto;
+        position: relative;
+        padding-top: 20px;
+        h2{
+            text-align: center;
+            line-height: 54px;
+            font-size: 36px;
+        }
+       span{
+           position: absolute;
+           display: block;
+           width: 500px;
+           height: 0;
+           border-bottom: 1px solid #666;
+       }
+       span:nth-of-type(1){
+           top: 50px;
+           left: 0;
+       }
+       span:nth-of-type(2){
+           top: 50px;
+           right: 0;
+       }
+    }
+    //新品首发
+    .newNav{
+        width: 1199px;
+        height: 395px;
+        margin: 0 auto;
+        background: white;
+        overflow: hidden;
+        position: relative;
+        .newspan{
+            position: absolute;
+            width: 20px;
+            height: 40px;
+            background: #ccc;
+            z-index: 10;
+            color: white;
+            line-height: 40px;
+            font-size: 20px;
+        }
+        #newl{//角
+            top: 178px;
+            left: 0;
+        }
+        #newr{//角
+            top: 178px;
+            right: 0;
+        }
+        ul{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3600px;
+            height: 395px;
+            padding-top: 20px;
+            li{
+                float: left;
+                width: 300px;
+                height: 355px;
+                border-right: 1px solid #d3d3d3;
+                .newNav-img1{
+                    margin-left: 50px;
+                    img{
+                        width: 26px;
+                        height: 26px;
+                    }
+                }
+                .newNav-img2{
+                    text-align: center;
+                    img{
+                        width: 200px;
+                        height: 200px;
+                    }
+                }
+                p{
+                    margin-top: 20px;
+                    padding: 0 30px;
+                    text-align: center;
+                    line-height: 20px;
+                    height: 20px;
+                    font-size: 14px;
+                    overflow: hidden;
+                    display: block;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    a{
+                        color: #333;
+                        &:hover{
+                            color: #333;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                .newPicre{
+                    text-align: center;
+                    margin-top: 30px;
+                    em{
+                        font-style: normal;
+                        color: #f03468;
+                        font-size: 16px;
+                    }
+                    span{
+                        color: #f03468;
+                        font-size: 30px;
+                        
+                    }
+                    del{
+                        color: #999;
+                    }
+                    
+                }
+            }
+        }
+    }
+    //新品首发 ol
+    #newOl{
+        width: 1200px;
+        height: 340px;
+        margin: 30px auto;
+        ol{
+            margin-top: 30px;
+            li{
+                margin-left: 10px;
+                margin-bottom: 10px;
+                float: left;
+                position: relative;
+                
+            }
+        }
+    }
+    .faddish{
+        width: 1220px;
+        margin: 0 auto;
+        ul{
+            overflow: hidden;
+            padding: 20px 0 50px 0;
+            li{
+                float: left;
+                margin: 10px;
+                width: 285px;
+                height: 372px;
+                position: relative;
+                .faddish-div{
+                    text-align: center;
+                    width: 285px;
+                    height: 372px;
+                    background: white;
+                    overflow: hidden;
+                    img{
+                        margin-top: 10px;
+                        width: 240px;
+                        height: 240px;
+                    }
+                    p{
+                        margin-top: 20px;
+                        padding: 0 30px;
+                        text-align: center;
+                        line-height: 20px;
+                        height: 20px;
+                        font-size: 14px;
+                        overflow: hidden;
+                        display: block;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        a{
+                            color: #333;
+                            &:hover{
+                                color: #333;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                    .faddish-picre{
+                        text-align: center;
+                        margin-top: 30px;
+                        em{
+                            font-style: normal;
+                            color: #f03468;
+                            font-size: 16px;
+                        }
+                        span{
+                            color: #f03468;
+                            font-size: 30px;
+                            
+                        }
+                        del{
+                            color: #999;
+                        }
+                    }
+                    .faddish-shopping{
+                        display: none;
+                        width: 120px;
+                        height: 40px;
+                        background: #f03468;
+                        color: #fefefe;
+                        line-height: 40px;
+                        font-size: 14px;
+                        position: absolute;
+                        top: 375px;
+                        left: 82px;
+                    }
+                    
+                }
+            }
+        }
+    }
+    
 }
+

@@ -1,5 +1,5 @@
 //banner
-(function(){
+$(function(){
 	var timer=null,
 		index=0,
 		$uList=$("#banner ul li"),//大图
@@ -49,9 +49,41 @@
 		$oList.eq(index).addClass("ban_1").siblings().removeClass("ban_1");
 		setTimeout((timer=setInterval( autoPlay , 3000 )),2000);
 	})
-})();
+})
 //HOT必买爆品
-(function(){
+//$(function(){
+//	$.getJSON("json/data.json?id="+new Date().getTime(), function(arr){
+//		var conStr = "";
+//		for(var i=0 ; i<arr.length ; i++){
+//			var pro=arr[i];
+//			conStr += `<li>
+//					<div class="sec-content-l">
+//						<a href=""><img src="img/${pro.src}"/></a>
+//					</div>
+//					<div class="sec-content-r">
+//						<p><i style="background-position:${pro.style};"></i><span>澳大利亚品牌</span></p>
+//						<p>${pro.name}</p>
+//						<p>${pro.introduce}</p>
+//						<div class="sec-content-r-yis">
+//							<span>已售<b>${pro.sell}</b>件</span><b class="sec-content-r-jiao"></b>
+//						</div>
+//						<div class="sec-content-r-price">
+//							<span class="sec-r-price">${pro.money}</span>
+//							<del>${pro.price}</del>
+//							<a href="${pro.a}"><span class="sec-msq">马上抢</span></a>
+//						</div>
+//					</div>
+//				</li>`;
+//		}
+//		$(".sec-content-ul").html(conStr);
+//		$(".sec-content-ul li").mouseenter(function(){
+//			$(".sec-content-l").eq($(this).index()).find("img").stop().animate({'width':'256px','height':'256px','top':'-11px','left':'-11px'},500);
+//		}).mouseleave(function(){
+//			$(".sec-content-l").eq($(this).index()).find("img").stop().animate({'width':'234px','height':'234px','top':0,'left':0},500);
+//		})
+//	})
+//})
+$(function(){
 	$.ajax({
 		type:"get",
 		url:"json/data.json",
@@ -90,9 +122,9 @@
 		}
 		$(".sec-content-ul").html(conStr);
 	}
-})();
+})
 //BRAND 全球品牌划过
-(function(){
+$(function(){
 	$("#sec-bra-r ul li").mouseenter(function(){
 		$(this).addClass("sec-bra-r-li").siblings().removeClass();
 		$("#sec-bra-r ol").eq($(this).index()).addClass("sec-bra-r-ol").siblings().removeClass();
@@ -118,9 +150,9 @@
 	}).mouseleave(function(){
 		$(this).find("img").stop().animate({'left':'50px'},300);
 	})
-})();	
+})
 //购物车 fixed
-(function(){
+$(function(){
 	$("#shopCart-cart").click(function(){
 		var $left = $(this).parent().offset().left;
 		if( parseInt($left+40) === $(window).width()){
@@ -136,7 +168,7 @@
 	$("#shopCart-top").click(function(){//返回头部
 		$("html,body").animate({"scrollTop":0},1000);
 	})
-})()	
+})
 //楼梯
 var $h=$(".sec-top").offset().top - 10,
 	$aside=$("aside").offset().top - 450;
