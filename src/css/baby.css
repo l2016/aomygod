@@ -1,254 +1,204 @@
 header #article-commodity-ul {
-  display: none;
-}
+  display: none; }
 header #banner {
-  height: 350px;
-}
-header #banner li {
-  height: 350px;
-}
-header #banner li a img {
-  height: 350px;
-}
-header #banner #baby_ban_left {
-  margin: -30px 0 0 -645px;
-}
+  height: 350px; }
+  header #banner li {
+    height: 350px; }
+    header #banner li a img {
+      height: 350px; }
+  header #banner #baby_ban_left {
+    margin: -30px 0 0 -645px; }
 
 #lou-ti-nav {
   position: fixed;
   top: 50px;
   left: 20px;
-  display: none;
-}
-#lou-ti-nav ul {
-  width: 50px;
-  height: 450px;
-  background: white;
-}
-#lou-ti-nav ul li {
-  width: 50px;
-  height: 50px;
-  padding: 8px 0 0 8px;
-}
-#lou-ti-nav ul li span {
-  display: inline-block;
-  width: 34px;
-  height: 34px;
-}
-#lou-ti-nav ul li:hover {
-  background: #ff432a;
-}
-#lou-ti-nav ul li:hover span {
-  color: white;
-}
+  display: none; }
+  #lou-ti-nav ul {
+    width: 50px;
+    height: 450px;
+    background: white; }
+    #lou-ti-nav ul li {
+      width: 50px;
+      height: 50px;
+      padding: 8px 0 0 8px; }
+      #lou-ti-nav ul li span {
+        display: inline-block;
+        width: 34px;
+        height: 34px; }
+      #lou-ti-nav ul li:hover {
+        background: #ff432a; }
+        #lou-ti-nav ul li:hover span {
+          color: white; }
 
 #baby-particulars {
   width: 100%;
-  background: #f2f2f2;
-}
-#baby-particulars .newProduct {
-  width: 1200px;
-  height: 74px;
-  margin: 0 auto;
-  position: relative;
-  padding-top: 20px;
-}
-#baby-particulars .newProduct h2 {
-  text-align: center;
-  line-height: 54px;
-  font-size: 36px;
-}
-#baby-particulars .newProduct span {
-  position: absolute;
-  display: block;
-  width: 500px;
-  height: 0;
-  border-bottom: 1px solid #666;
-}
-#baby-particulars .newProduct span:nth-of-type(1) {
-  top: 50px;
-  left: 0;
-}
-#baby-particulars .newProduct span:nth-of-type(2) {
-  top: 50px;
-  right: 0;
-}
-#baby-particulars .newNav {
-  width: 1199px;
-  height: 395px;
-  margin: 0 auto;
-  background: white;
-  overflow: hidden;
-  position: relative;
-}
-#baby-particulars .newNav .newspan {
-  position: absolute;
-  width: 20px;
-  height: 40px;
-  background: #ccc;
-  z-index: 10;
-  color: white;
-  line-height: 40px;
-  font-size: 20px;
-}
-#baby-particulars .newNav #newl {
-  top: 178px;
-  left: 0;
-}
-#baby-particulars .newNav #newr {
-  top: 178px;
-  right: 0;
-}
-#baby-particulars .newNav ul {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 3600px;
-  height: 395px;
-  padding-top: 20px;
-}
-#baby-particulars .newNav ul li {
-  float: left;
-  width: 300px;
-  height: 355px;
-  border-right: 1px solid #d3d3d3;
-}
-#baby-particulars .newNav ul li .newNav-img1 {
-  margin-left: 50px;
-}
-#baby-particulars .newNav ul li .newNav-img1 img {
-  width: 26px;
-  height: 26px;
-}
-#baby-particulars .newNav ul li .newNav-img2 {
-  text-align: center;
-}
-#baby-particulars .newNav ul li .newNav-img2 img {
-  width: 200px;
-  height: 200px;
-}
-#baby-particulars .newNav ul li p {
-  margin-top: 20px;
-  padding: 0 30px;
-  text-align: center;
-  line-height: 20px;
-  height: 20px;
-  font-size: 14px;
-  overflow: hidden;
-  display: block;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-#baby-particulars .newNav ul li p a {
-  color: #333;
-}
-#baby-particulars .newNav ul li p a:hover {
-  color: #333;
-  text-decoration: underline;
-}
-#baby-particulars .newNav ul li .newPicre {
-  text-align: center;
-  margin-top: 30px;
-}
-#baby-particulars .newNav ul li .newPicre em {
-  font-style: normal;
-  color: #f03468;
-  font-size: 16px;
-}
-#baby-particulars .newNav ul li .newPicre span {
-  color: #f03468;
-  font-size: 30px;
-}
-#baby-particulars .newNav ul li .newPicre del {
-  color: #999;
-}
-#baby-particulars #newOl {
-  width: 1200px;
-  height: 340px;
-  margin: 30px auto;
-}
-#baby-particulars #newOl ol {
-  margin-top: 30px;
-}
-#baby-particulars #newOl ol li {
-  margin-left: 10px;
-  margin-bottom: 10px;
-  float: left;
-  position: relative;
-}
-#baby-particulars .faddish {
-  width: 1220px;
-  margin: 0 auto;
-}
-#baby-particulars .faddish ul {
-  overflow: hidden;
-  padding: 20px 0 50px 0;
-}
-#baby-particulars .faddish ul li {
-  float: left;
-  margin: 10px;
-  width: 285px;
-  height: 372px;
-  position: relative;
-}
-#baby-particulars .faddish ul li .faddish-div {
-  text-align: center;
-  width: 285px;
-  height: 372px;
-  background: white;
-  overflow: hidden;
-}
-#baby-particulars .faddish ul li .faddish-div img {
-  margin-top: 10px;
-  width: 240px;
-  height: 240px;
-}
-#baby-particulars .faddish ul li .faddish-div p {
-  margin-top: 20px;
-  padding: 0 30px;
-  text-align: center;
-  line-height: 20px;
-  height: 20px;
-  font-size: 14px;
-  overflow: hidden;
-  display: block;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-#baby-particulars .faddish ul li .faddish-div p a {
-  color: #333;
-}
-#baby-particulars .faddish ul li .faddish-div p a:hover {
-  color: #333;
-  text-decoration: underline;
-}
-#baby-particulars .faddish ul li .faddish-div .faddish-picre {
-  text-align: center;
-  margin-top: 30px;
-}
-#baby-particulars .faddish ul li .faddish-div .faddish-picre em {
-  font-style: normal;
-  color: #f03468;
-  font-size: 16px;
-}
-#baby-particulars .faddish ul li .faddish-div .faddish-picre span {
-  color: #f03468;
-  font-size: 30px;
-}
-#baby-particulars .faddish ul li .faddish-div .faddish-picre del {
-  color: #999;
-}
-#baby-particulars .faddish ul li .faddish-div .faddish-shopping {
-  display: none;
-  width: 120px;
-  height: 40px;
-  background: #f03468;
-  color: #fefefe;
-  line-height: 40px;
-  font-size: 14px;
-  position: absolute;
-  top: 375px;
-  left: 82px;
-}
+  background: #f2f2f2; }
+  #baby-particulars .newProduct {
+    width: 1200px;
+    height: 74px;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 20px; }
+    #baby-particulars .newProduct h2 {
+      text-align: center;
+      line-height: 54px;
+      font-size: 36px; }
+    #baby-particulars .newProduct span {
+      position: absolute;
+      display: block;
+      width: 500px;
+      height: 0;
+      border-bottom: 1px solid #666; }
+    #baby-particulars .newProduct span:nth-of-type(1) {
+      top: 50px;
+      left: 0; }
+    #baby-particulars .newProduct span:nth-of-type(2) {
+      top: 50px;
+      right: 0; }
+  #baby-particulars .newNav {
+    width: 1199px;
+    height: 395px;
+    margin: 0 auto;
+    background: white;
+    overflow: hidden;
+    position: relative; }
+    #baby-particulars .newNav .newspan {
+      position: absolute;
+      width: 20px;
+      height: 40px;
+      background: #ccc;
+      z-index: 10;
+      color: white;
+      line-height: 40px;
+      font-size: 20px; }
+    #baby-particulars .newNav #newl {
+      top: 178px;
+      left: 0; }
+    #baby-particulars .newNav #newr {
+      top: 178px;
+      right: 0; }
+    #baby-particulars .newNav ul {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3600px;
+      height: 395px;
+      padding-top: 20px; }
+      #baby-particulars .newNav ul li {
+        float: left;
+        width: 300px;
+        height: 355px;
+        border-right: 1px solid #d3d3d3; }
+        #baby-particulars .newNav ul li .newNav-img1 {
+          margin-left: 50px; }
+          #baby-particulars .newNav ul li .newNav-img1 img {
+            width: 26px;
+            height: 26px; }
+        #baby-particulars .newNav ul li .newNav-img2 {
+          text-align: center; }
+          #baby-particulars .newNav ul li .newNav-img2 img {
+            width: 200px;
+            height: 200px; }
+        #baby-particulars .newNav ul li p {
+          margin-top: 20px;
+          padding: 0 30px;
+          text-align: center;
+          line-height: 20px;
+          height: 20px;
+          font-size: 14px;
+          overflow: hidden;
+          display: block;
+          white-space: nowrap;
+          text-overflow: ellipsis; }
+          #baby-particulars .newNav ul li p a {
+            color: #333; }
+            #baby-particulars .newNav ul li p a:hover {
+              color: #333;
+              text-decoration: underline; }
+        #baby-particulars .newNav ul li .newPicre {
+          text-align: center;
+          margin-top: 30px; }
+          #baby-particulars .newNav ul li .newPicre em {
+            font-style: normal;
+            color: #f03468;
+            font-size: 16px; }
+          #baby-particulars .newNav ul li .newPicre span {
+            color: #f03468;
+            font-size: 30px; }
+          #baby-particulars .newNav ul li .newPicre del {
+            color: #999; }
+  #baby-particulars #newOl {
+    width: 1200px;
+    height: 340px;
+    margin: 30px auto; }
+    #baby-particulars #newOl ol {
+      margin-top: 30px; }
+      #baby-particulars #newOl ol li {
+        margin-left: 10px;
+        margin-bottom: 10px;
+        float: left;
+        position: relative; }
+  #baby-particulars .faddish {
+    width: 1220px;
+    margin: 0 auto; }
+    #baby-particulars .faddish ul {
+      overflow: hidden;
+      padding: 20px 0 50px 0; }
+      #baby-particulars .faddish ul li {
+        float: left;
+        margin: 10px;
+        width: 285px;
+        height: 372px;
+        position: relative; }
+        #baby-particulars .faddish ul li .faddish-div {
+          text-align: center;
+          width: 285px;
+          height: 372px;
+          background: white;
+          overflow: hidden; }
+          #baby-particulars .faddish ul li .faddish-div img {
+            margin-top: 10px;
+            width: 240px;
+            height: 240px; }
+          #baby-particulars .faddish ul li .faddish-div p {
+            margin-top: 20px;
+            padding: 0 30px;
+            text-align: center;
+            line-height: 20px;
+            height: 20px;
+            font-size: 14px;
+            overflow: hidden;
+            display: block;
+            white-space: nowrap;
+            text-overflow: ellipsis; }
+            #baby-particulars .faddish ul li .faddish-div p a {
+              color: #333; }
+              #baby-particulars .faddish ul li .faddish-div p a:hover {
+                color: #333;
+                text-decoration: underline; }
+          #baby-particulars .faddish ul li .faddish-div .faddish-picre {
+            text-align: center;
+            margin-top: 30px; }
+            #baby-particulars .faddish ul li .faddish-div .faddish-picre em {
+              font-style: normal;
+              color: #f03468;
+              font-size: 16px; }
+            #baby-particulars .faddish ul li .faddish-div .faddish-picre span {
+              color: #f03468;
+              font-size: 30px; }
+            #baby-particulars .faddish ul li .faddish-div .faddish-picre del {
+              color: #999; }
+          #baby-particulars .faddish ul li .faddish-div .faddish-shopping {
+            display: none;
+            width: 120px;
+            height: 40px;
+            background: #f03468;
+            color: #fefefe;
+            line-height: 40px;
+            font-size: 14px;
+            position: absolute;
+            top: 375px;
+            left: 82px; }
 
 /*# sourceMappingURL=baby.css.map */

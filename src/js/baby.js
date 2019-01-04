@@ -164,7 +164,7 @@ $(function(){
 							<img src="img/${pro.src1}" alt="" />
 						</div>
 						<div class="newNav-img2">
-							<a href="">
+							<a href="${pro.a}">
 								<img src="img/${pro.src2}" alt="" />
 							</a>
 						</div>
